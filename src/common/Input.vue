@@ -1,3 +1,3 @@
 <script>
-//  业务组件
+// UI组价
 </script>

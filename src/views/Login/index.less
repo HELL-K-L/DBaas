@@ -1,0 +1,305 @@
+.loginBg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 0;
+  background: url(../../assets/images/bg.png) 0 0 no-repeat;
+  background-size: 100% 100%;
+  .login--version {
+    position: absolute;
+    right: 0;
+    bottom: 10px;
+    left: 0;
+    .login--versionTxt {
+      margin: auto;
+      width: 683px;
+      height: 23px;
+      color: #a2caf0;
+      text-align: center;
+      font-size: 12px;
+      line-height: 23px;
+    }
+  }
+  .login--warnTxt {
+    position: relative;
+    top: 20px;
+    width: 240px;
+    height: 30px;
+    border: solid 1px #ffe2e2;
+    border-radius: 4px;
+    background-color: #fff0f0;
+    color: #f84360;
+    font-size: 12px;
+    line-height: 30px;
+    i {
+      margin-left: 8px;
+      color: #f84360;
+      font-size: 12px;
+    }
+  }
+  .login--container {
+    position: absolute;
+    top: 0;
+    right: 154px;
+    bottom: 0;
+    left: 80px;
+    .login_pwdStatus {
+      .el-form-item__content {
+        width: 240px;
+      }
+    }
+    .login_btn {
+      .el-form-item__content {
+        position: relative;
+        top: 20px;
+      }
+    }
+    .login--logoHeader {
+      margin-top: 23px;
+    }
+    .is-checked {
+      .el-checkbox__inner {
+        border: none !important;
+      }
+    }
+    .login--mainImg {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 713px;
+      height: 596px;
+      background: url('../../assets/images/mainPic.png') 0 0 no-repeat;
+      background-size: contain;
+    }
+
+    .login--inputPanel {
+      position: absolute;
+      right: 0;
+      bottom: 95px;
+      padding: 66px;
+      width: 375px;
+      height: 487px;
+      border-radius: 8px;
+      background-color: #fff;
+      box-shadow: 0 2px 12px 0 rgba(0, 43, 93, 0.16);
+      .el-form {
+        position: relative;
+        top: 41px;
+        margin: 0;
+        &.top7 {
+          top: 37px;
+        }
+        .el-input__inner {
+          padding-left: 35px;
+          width: 240px;
+          border: none;
+          border-bottom: 1px solid #d7d7d7;
+          border-radius: 0;
+          color: #82888f;
+          font-size: 14px;
+          line-height: 35px;
+          transition: none;
+          &:hover {
+            border-top: none !important;
+            border-right: none !important;
+            border-bottom: 1px solid #d7d7d7 !important;
+            border-left: none !important;
+          }
+        }
+        .el-form-item {
+          position: relative;
+          margin: 0;
+          height: 56px;
+          //.el-form-item__content{
+          //  height:56px;
+          //}
+          .el-checkbox__label {
+            padding-left: 20px;
+            color: #82888f;
+            font-size: 12px;
+          }
+        }
+        .loginTxt {
+          //line-height:95px;
+          display: inline-block;
+          width: auto;
+          color: #82888f;
+          font-size: 12px;
+          .el-checkbox__inner {
+            border-radius: 2px;
+          }
+        }
+        .icon {
+          position: absolute;
+          //top: 37px;
+          z-index: 99;
+          color: #009efb;
+          font-size: 14px;
+        }
+      }
+
+      .loginBtn {
+        width: 100%;
+        height: 42px;
+        border: none;
+        border-radius: 21px;
+        background-color: #009efb;
+        color: white;
+        font-size: 14px;
+      }
+      header {
+        width: 240px;
+        color: #54667a;
+        letter-spacing: 0;
+        font-weight: normal;
+        font-stretch: normal;
+        font-size: 22px;
+        line-height: 35px;
+      }
+    }
+  }
+  @media screen and (max-width: 1366px) {
+    .login--container {
+      right: 154px;
+      left: 80px;
+    }
+    .login--mainImg {
+      width: 713px;
+      height: 596px;
+    }
+  }
+  @media screen and (min-width: 1367px) and (max-width: 1440px) {
+    .login--container {
+      right: 154px;
+      left: 80px;
+    }
+    .login--mainImg {
+      width: 713px;
+      height: 596px;
+    }
+  }
+  @media screen and (min-width: 1441px) and (max-width: 1600px) {
+    .login--container {
+      right: 154px;
+      left: 80px;
+    }
+    .login--mainImg {
+      width: 713px;
+      height: 596px;
+    }
+  }
+  @media screen and (min-width: 1601px) and (max-width: 1800px) {
+    .login--container {
+      right: 250px;
+      left: 184px;
+    }
+    .login--mainImg {
+      width: 890px !important;
+      height: 789px !important;
+      background: url('../../assets/images/主图.png') 0 0 no-repeat !important;
+      background-size: contain !important;
+    }
+    .login--inputPanel {
+      bottom: 247px !important;
+      width: 375px !important;
+      height: 502px !important;
+      .el-form {
+        .loginTxt {
+          font-size: 12px !important;
+        }
+        .el-input__inner {
+          width: 247px !important;
+          font-size: 14px !important;
+        }
+        .el-form-item {
+          height: 56px !important;
+          .el-checkbox__label {
+            font-size: 12px !important;
+          }
+        }
+      }
+    }
+  }
+  @media screen and (min-width: 1801px) and (max-width: 1899px) {
+    .login--container {
+      right: 319px;
+      left: 184px;
+    }
+    .login--mainImg {
+      width: 953px !important;
+      height: 849px !important;
+      background: url('../../assets/images/主图.png') 0 0 no-repeat !important;
+      background-size: contain !important;
+    }
+    .login_pwdStatus .el-form-item__content {
+      width: 282px !important;
+    }
+    .login--inputPanel {
+      bottom: 247px !important;
+      width: 375px !important;
+      height: 502px !important;
+      header {
+        width: 282px !important;
+      }
+      .el-form {
+        .loginTxt {
+          font-size: 12px !important;
+        }
+        .el-input__inner {
+          width: 247px !important;
+          font-size: 14px !important;
+        }
+        .el-form-item {
+          height: 56px !important;
+          .el-checkbox__label {
+            font-size: 12px !important;
+          }
+        }
+      }
+    }
+  }
+  @media screen and (min-width: 1900px) {
+    .login--container {
+      right: 319px;
+      left: 184px;
+    }
+    .login--mainImg {
+      width: 953px !important;
+      height: 849px !important;
+      background: url('../../assets/images/主图.png') 0 0 no-repeat !important;
+      background-size: contain !important;
+    }
+    header {
+      font-size: 26px !important;
+    }
+    .login--inputPanel {
+      bottom: 247px !important;
+      width: 419px !important;
+      height: 580px !important;
+      header {
+        width: 282px !important;
+      }
+      .login_pwdStatus .el-form-item__content {
+        width: 282px !important;
+      }
+      .el-form {
+        .loginTxt {
+          font-size: 14px !important;
+        }
+
+        .el-input__inner {
+          width: 283px !important;
+          font-size: 16px !important;
+        }
+        .el-form-item {
+          height: 77px !important;
+          .el-checkbox__label {
+            font-size: 14px !important;
+          }
+        }
+      }
+    }
+  }
+}
