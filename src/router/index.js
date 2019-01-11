@@ -13,8 +13,11 @@ export default new Router({
     { path: '/', redirect: 'enmoLogin' },
     {
       path: '/enmoLogin',
-      component: () =>
-        import(/* webpackChunkName: "about" */ '$views/Login/index.vue')
+      component: () => import(/* webpackChunkName: "about" */ '$views/Login')
+    },
+    {
+      path: '/colors',
+      component: () => import(/* webpackChunkName: "about" */ '$views/colors')
     }
   ]
 });
