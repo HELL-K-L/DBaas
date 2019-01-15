@@ -2,71 +2,83 @@
   <div class="loginBg">
     <div class="login--container">
       <header class="login--logoHeader">
-        <img src="../../assets/images/LOGO2.png"
-             alt>
+        <img src="../../assets/images/LOGO2.png" alt />
       </header>
       <div class="login--content">
         <div class="login--mainImg"></div>
         <div class="login--inputPanel">
           <header>zCloud DBaaS 管理平台</header>
 
-          <div class="login--warnTxt animated"
-               :class="{'bounce':warnMessageShow}"
-               v-show="warnMessageShow">
+          <div
+            class="login--warnTxt animated"
+            :class="{ bounce: warnMessageShow }"
+            v-show="warnMessageShow"
+          >
             <i class="icon iconfont icon-cuowucha"></i>&nbsp;&nbsp;
-            <span>{{warnMessage}}</span>
+            <span>{{ warnMessage }}</span>
           </div>
-          <el-form :model="loginForm"
-                   :rules="loginRule"
-                   ref="loginForm"
-                   label-position="left"
-                   label-width="0px"
-                   class="demo-ruleForm login-container animated"
-                   :class="{'top7':warnMessageShow}">
+          <el-form
+            :model="loginForm"
+            :rules="loginRule"
+            ref="loginForm"
+            label-position="left"
+            label-width="0px"
+            class="demo-ruleForm login-container animated"
+            :class="{ top7: warnMessageShow }"
+          >
             <el-form-item prop="tenementname">
               <i class="icon iconfont icon-zhanghao"></i>
 
-              <el-select v-model="loginForm.tenementname"
-                         placeholder="请输入租户名称">
-                <el-option v-for="item in tenementnameList"
-                           :key="item.tenementName"
-                           :label="item.tenementChinName || item.tenementName"
-                           :value="item.tenementName"></el-option>
+              <el-select
+                v-model="loginForm.tenementname"
+                placeholder="请输入租户名称"
+              >
+                <el-option
+                  v-for="item in tenementnameList"
+                  :key="item.tenementName"
+                  :label="item.tenementChinName || item.tenementName"
+                  :value="item.tenementName"
+                ></el-option>
               </el-select>
               <!--<el-input type="text" autofocus v-model.trim="loginForm.tenementname" @keyup.enter.native="handleSubmit"-->
               <!--placeholder="请输入租户名称"></el-input>-->
             </el-form-item>
             <el-form-item prop="username">
               <i class="icon iconfont icon-zhanghao"></i>
-              <el-input type="text"
-                        v-model.trim="loginForm.username"
-                        @keyup.enter.native="handleSubmit"
-                        placeholder="请输入用户名称"></el-input>
+              <el-input
+                type="text"
+                v-model.trim="loginForm.username"
+                @keyup.enter.native="handleSubmit"
+                placeholder="请输入用户名称"
+              ></el-input>
             </el-form-item>
             <el-form-item prop="password">
               <i class="icon iconfont icon-mima"></i>
-              <el-input type="password"
-                        v-model.trim="loginForm.password"
-                        @keyup.enter.native="handleSubmit"
-                        placeholder="请输入密码"></el-input>
+              <el-input
+                type="password"
+                v-model.trim="loginForm.password"
+                @keyup.enter.native="handleSubmit"
+                placeholder="请输入密码"
+              ></el-input>
             </el-form-item>
-            <el-form-item prop="password"
-                          class="login_pwdStatus">
-              <el-checkbox v-model="checked"
-                           checked
-                           class="remember loginTxt em-checkBox">记住密码
+            <el-form-item prop="password" class="login_pwdStatus">
+              <el-checkbox
+                v-model="checked"
+                checked
+                class="remember loginTxt em-checkBox"
+                >记住密码
               </el-checkbox>
-              <span class="floatRight loginTxt">
-                <a>忘记密码？</a>
-              </span>
+              <span class="floatRight loginTxt"> <a>忘记密码？</a> </span>
             </el-form-item>
 
             <el-form-item class="login_pwdStatus login_btn">
-              <el-button :disabled="buttonDisable"
-                         class="loginBtn"
-                         @keyup.enter.native="handleSubmit"
-                         @click.native.prevent="handleSubmit"
-                         :loading="loginLoading">登&nbsp;录
+              <el-button
+                :disabled="buttonDisable"
+                class="loginBtn"
+                @keyup.enter.native="handleSubmit"
+                @click.native.prevent="handleSubmit"
+                :loading="loginLoading"
+                >登&nbsp;录
               </el-button>
             </el-form-item>
           </el-form>
@@ -74,8 +86,9 @@
       </div>
     </div>
     <div class="login--version">
-      <div class="login--versionTxt">Yunhe Enmo (Beijing) Information Technology Co., Ltd. / Copyright © 2009-2016
-        enmotech.com, All rights reserved.
+      <div class="login--versionTxt">
+        Yunhe Enmo (Beijing) Information Technology Co., Ltd. / Copyright ©
+        2009-2016 enmotech.com, All rights reserved.
       </div>
     </div>
   </div>
@@ -96,16 +109,17 @@ export default {
     return {
       buttonDisable: false,
       loginForm: {
-        system: '',
-        username: '',
-        password: '',
-        tenementname: ''
+        system: "",
+        username: "",
+        password: "",
+        tenementname: ""
       },
-      warnMessage: '',
+
+      warnMessage: "",
       warnMessageShow: false,
       systemOption: [
-        { label: 'oracle', value: 'oracle' },
-        { label: 'mySql', value: 'mySql' }
+        { label: "oracle", value: "oracle" },
+        { label: "mySql", value: "mySql" }
       ],
       tenementnameList: [],
       loginLoading: false,
@@ -136,7 +150,7 @@ export default {
       //   if (res.data.suc) {
       //     _this.tenementnameList = res.data.obj;
       //   } else {
-      //     _this.$notify({
+      //     _this.$notify({`
       //       title: "警告",
       //       message: msg,
       //       type: "warning"
@@ -173,7 +187,7 @@ export default {
       // }
     },
     clearCookie() {
-      this.setCookie('', '', '', -1); //修改2值都为空，天数为负1天就好了
+      this.setCookie("", "", "", -1); //修改2值都为空，天数为负1天就好了
     },
 
     handleReset2() {
@@ -276,6 +290,7 @@ export default {
       // });
     },
     handleSubmit() {
+      this.$router.push("test");
       // let _this = this,
       //   param = "";
       // if (_this.loginForm.tenementname == "") {
